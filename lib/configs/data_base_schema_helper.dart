@@ -3,5 +3,5 @@ final class DataBaseSchemaHelper {
 }
 
 final class DataBaseNoSqlSchemaHelper {
-  static const String kUserToken = 'user_token';
+  static const String kUserToken = '0593c312-8754-462e-8082-8968cfee45aa';
 }

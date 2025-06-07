@@ -21,7 +21,7 @@ class CoinRepository {
       "X-CMC_PRO_API_KEY": "0593c312-8754-462e-8082-8968cfee45aa",
     };
 
-    final response = await _remote.getWithHeaders(url, headers);
+    final response = await _remote.get(url);
 
     if (response.statusCode == 200 && response.data != null) {
       final Map<String, dynamic> coinsMap = response.data['data'];
