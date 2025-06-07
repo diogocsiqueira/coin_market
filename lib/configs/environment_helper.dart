@@ -1,16 +1,10 @@
 abstract interface class IEnvironmentHelper {
-  String? get urlAuthentication;
-  String? get urlWorkout;
+  String? get baseUrl;
 }
 
 final class EnvironmentHelper implements IEnvironmentHelper {
   const EnvironmentHelper();
 
-  String get _urlBase => 'https://localhost:8080';
-
   @override
-  String? get urlAuthentication => '$_urlBase/authentication';
-
-  @override
-  String? get urlWorkout => '$_urlBase/workout';
+  String get baseUrl => 'https://localhost:8080';
 }
