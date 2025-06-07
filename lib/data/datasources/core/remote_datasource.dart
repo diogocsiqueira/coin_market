@@ -19,6 +19,17 @@ base class RemoteDataSource implements IRemoteDataSource {
     }
   }
 
+  Future<HttpResponseEntity> getWithHeaders(
+    String url,
+    Map<String, String> headers,
+  ) async {
+    try {
+      return await _http.get(url, headers: headers);
+    } catch (_) {
+      rethrow;
+    }
+  }
+
   @override
   Future<HttpResponseEntity?> post(String url, [String? data]) async {
     try {

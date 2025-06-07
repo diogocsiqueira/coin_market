@@ -6,5 +6,5 @@ final class EnvironmentHelper implements IEnvironmentHelper {
   const EnvironmentHelper();
 
   @override
-  String get baseUrl => 'https://localhost:8080';
+  String get baseUrl => 'https://pro-api.coinmarketcap.com';
 }
