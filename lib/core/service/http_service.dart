@@ -45,6 +45,9 @@ final class HttpService implements IHttpService {
   }) async {
     try {
       await _changeDioOptionsAsync();
+      if (headers != null && headers.isNotEmpty) {
+        _dio.options.headers.addAll(headers);
+      }
       final Response response = await _dio.get(url);
       return _createHttpResponseFromResponse(response);
     } catch (error) {
